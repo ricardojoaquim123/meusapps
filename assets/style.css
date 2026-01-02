@@ -266,23 +266,26 @@ main {
 }
 
 .content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 32px;
+    display: block;
+    max-width: 800px;
+}
+
+.main-content {
+    width: 100%;
 }
 
 .main-content h2 {
     color: var(--primary-color);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     font-size: 2em;
 }
 
 .main-content p {
-    hyphens: auto;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    text-align: justify;
+    line-height: 1.7;
+    margin-bottom: 16px;
 }
 
 .features-list {
@@ -292,12 +295,10 @@ main {
 }
 
 .features-list li {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     padding-left: 30px;
     position: relative;
-    line-height: 1.6;
-    display: flex;
-    align-items: baseline;
+    line-height: 1.7;
 }
 
 .features-list li::before {
@@ -307,7 +308,7 @@ main {
     line-height: 1;
     position: absolute;
     left: 0;
-    top: 5px;
+    top: 2px;
 }
 
 .feature-title {
@@ -323,7 +324,8 @@ main {
     padding: 30px;
     border-radius: 16px;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 48px;
+    margin-bottom: 24px;
 }
 
 .play-store-button img {
@@ -416,7 +418,8 @@ footer a:hover {
         font-size: 2.4em;
     }
     .content {
-        grid-template-columns: 1fr;
+        display: block;
+        max-width: 100%;
     }
     .app-header-detail {
         flex-direction: column;
