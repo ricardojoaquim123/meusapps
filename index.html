@@ -62,7 +62,7 @@
 
         .apps-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 40px;
         }
 
@@ -134,9 +134,13 @@
         }
 
         .app-card-footer {
-            padding: 20px 30px;
+            padding: 25px 30px;
             background-color: rgba(0, 0, 0, 0.2);
             text-align: center;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .play-store-button img {
@@ -146,6 +150,18 @@
 
         .play-store-button:hover img {
             transform: scale(1.05);
+        }
+
+        .coming-soon-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #999;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+            cursor: not-allowed;
+            user-select: none;
         }
 
         footer {
@@ -206,6 +222,30 @@
                         <a href="https://play.google.com/store/apps/details?id=com.rjl.scanflow.scanflow" target="_blank" class="play-store-button">
                             <img src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" alt="Disponível no Google Play">
                         </a>
+                    </div>
+                </div>
+
+                <!-- Card do CarLife Log -->
+                <div class="app-card">
+                    <div class="app-card-content">
+                        <div class="app-header">
+                            <img src="assets/images/carlife-log-logo.png" alt="Logo do CarLife Log" class="app-logo">
+                            <h3>CarLife Log</h3>
+                        </div>
+                        <p class="app-description">
+                            Seu assistente pessoal para manutenção automotiva e controle de combustível, com foco total em privacidade (100% offline).
+                        </p>
+                        
+                        <ul class="features-list">
+                            <li>Gestão de Manutenção Inteligente</li>
+                            <li>Controle de Combustível e Consumo</li>
+                            <li>Privacidade Total (100% Offline)</li>
+                            <li>Relatórios Detalhados em PDF</li>
+                            <li>Backup local em formato JSON</li>
+                        </ul>
+                    </div>
+                    <div class="app-card-footer">
+                        <span class="coming-soon-button">Em Breve no Google Play</span>
                     </div>
                 </div>
 
