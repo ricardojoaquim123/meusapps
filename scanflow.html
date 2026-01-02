@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScanFlow - Milapps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00aaff;
+            --text-color: #e0e0e0;
+            --text-secondary-color: #b0b0b0;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #0D1117;
+            background: linear-gradient(180deg, #0D1117 0%, #161B22 100%);
+            color: var(--text-color);
+            margin: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .app-header-detail {
+            display: flex;
+            align-items: center;
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(30, 30, 30, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+        }
+        .app-logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 25px;
+            border-radius: 15px;
+        }
+        .app-title-group h1 {
+            font-size: 3em;
+            margin: 0;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        .app-title-group p {
+            font-size: 1.2em;
+            margin: 0;
+            font-weight: 300;
+        }
+        .back-link {
+            display: inline-block;
+            margin: 20px 0;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+        .content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+        .main-content h2 {
+            color: var(--primary-color);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 10px;
+            font-size: 2em;
+        }
+        .features-list {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.05em;
+        }
+        .features-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .features-list li::before {
+            content: '✔';
+            color: var(--primary-color);
+            margin-right: 15px;
+            font-size: 1.4em;
+            line-height: 1.2;
+        }
+        .sidebar .cta-box {
+            background: rgba(30, 30, 30, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            position: sticky;
+            top: 20px;
+        }
+        .play-store-button img {
+            height: 60px;
+            transition: transform 0.2s ease;
+        }
+        .play-store-button:hover img {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 10px rgba(0, 170, 255, 0.5));
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            background: rgba(16, 18, 22, 0.5);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            font-size: 0.9em;
+            color: var(--text-secondary-color);
+        }
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            .app-header-detail {
+                flex-direction: column;
+                text-align: center;
+            }
+            .app-logo {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Voltar para a página inicial</a>
+        <header class="app-header-detail">
+            <img src="assets/images/scanflow-logo.png" alt="Logo do ScanFlow" class="app-logo">
+            <div class="app-title-group">
+                <h1>ScanFlow</h1>
+                <p>Digitalize, otimize e compartilhe documentos profissionais.</p>
+            </div>
+        </header>
+
+        <main class="content">
+            <div class="main-content">
+                <h2>Sobre este app</h2>
+                <p>Com o ScanFlow você entrega documentos profissionais, em qualquer lugar, sem depender de scanners físicos. Substitua seu scanner de mesa por um aplicativo otimizado para produtividade, com digitalização aprimorada por Machine Learning, diversos formatos de exportação e ferramentas de processamento de imagem.</p>
+                
+                <h2>Principais recursos</h2>
+                <ul class="features-list">
+                    <li><b>Scan rápido ou em lotes:</b> Capture uma página ou crie documentos multi-página com rotação individual e filtros automáticos.</li>
+                    <li><b>Exportar e compartilhar:</b> Gere PDFs profissionais, JPG ou PNG e compartilhe com uma mensagem discreta convidando novos usuários.</li>
+                    <li><b>Histórico inteligente:</b> Acesse digitalizações recentes, envie novamente ou armazene localmente para consulta futura.</li>
+                    <li><b>Processamento de Imagem:</b> Novos filtros para maior contraste, modo preto e branco otimizado e rotação sem perdas.</li>
+                     <li><b>Tema dinâmico:</b> Interface integrada ao modo claro/escuro do seu Android.</li>
+                </ul>
+            </div>
+            <aside class="sidebar">
+                <div class="cta-box">
+                    <p>Experimente grátis!</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.rjl.scanflow.scanflow" target="_blank" class="play-store-button">
+                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" alt="Disponível no Google Play">
+                    </a>
+                </div>
+            </aside>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2026 Milapps. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

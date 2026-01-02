@@ -9,19 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #121212;
-            --surface-color: #1e1e1e;
-            --primary-color: #3498db;
+            --primary-color: #00aaff;
             --text-color: #e0e0e0;
             --text-secondary-color: #b0b0b0;
         }
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: var(--bg-color);
+            background: #0D1117;
+            background: linear-gradient(180deg, #0D1117 0%, #161B22 100%);
             color: var(--text-color);
             margin: 0;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .container {
@@ -33,13 +33,16 @@
         header {
             text-align: center;
             padding: 80px 20px;
-            background-color: var(--surface-color);
+            background: rgba(16, 18, 22, 0.5);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
 
         header h1 {
-            font-size: 3em;
+            font-size: 3.5em;
             margin-bottom: 10px;
             color: var(--primary-color);
+            font-weight: 700;
         }
 
         header p {
@@ -67,18 +70,21 @@
         }
 
         .app-card {
-            background-color: var(--surface-color);
-            border-radius: 10px;
+            background: rgba(30, 30, 30, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .app-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px 0 rgba(0, 170, 255, 0.2);
         }
 
         .app-card-content {
@@ -113,62 +119,36 @@
             flex-grow: 1;
         }
         
-        .app-card .features-list {
-            list-style-type: none;
-            padding: 0;
-            margin-bottom: 25px;
-            font-size: 0.95em;
-        }
-
-        .app-card .features-list li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-
-        .app-card .features-list li::before {
-            content: '✔';
-            color: var(--primary-color);
-            margin-right: 10px;
-            font-size: 1.2em;
-        }
-
         .app-card-footer {
             padding: 25px 30px;
             background-color: rgba(0, 0, 0, 0.2);
             text-align: center;
-            min-height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .play-store-button img {
-            height: 50px;
-            transition: transform 0.2s ease;
         }
 
-        .play-store-button:hover img {
+        .details-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .details-button:hover {
+            background-color: #0077b3;
+            box-shadow: 0 0 20px rgba(0, 170, 255, 0.5);
             transform: scale(1.05);
         }
-
-        .coming-soon-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #999;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 0.9em;
-            cursor: not-allowed;
-            user-select: none;
-        }
-
+        
         footer {
             text-align: center;
             padding: 40px 20px;
             margin-top: 60px;
-            background-color: var(--surface-color);
+            background: rgba(16, 18, 22, 0.5);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
             font-size: 0.9em;
             color: var(--text-secondary-color);
         }
@@ -207,21 +187,11 @@
                             <h3>ScanFlow</h3>
                         </div>
                         <p class="app-description">
-                            Substitua seu scanner de mesa por um aplicativo otimizado para produtividade. Entregue documentos profissionais de qualquer lugar, sem depender de scanners físicos.
+                            O scanner de documentos para resultados profissionais, no seu bolso.
                         </p>
-                        
-                        <ul class="features-list">
-                            <li>Digitalização rápida com ML Kit</li>
-                            <li>Exportação para PDF, JPG e RTF</li>
-                            <li>Filtros para otimização de imagem</li>
-                            <li>Histórico inteligente de documentos</li>
-                            <li>Tema dinâmico (Claro/Escuro)</li>
-                        </ul>
                     </div>
                     <div class="app-card-footer">
-                        <a href="https://play.google.com/store/apps/details?id=com.rjl.scanflow.scanflow" target="_blank" class="play-store-button">
-                            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/pt-br_badge_web_generic.png" alt="Disponível no Google Play">
-                        </a>
+                        <a href="scanflow.html" class="details-button">Saiba Mais</a>
                     </div>
                 </div>
 
@@ -233,23 +203,13 @@
                             <h3>CarLife Log</h3>
                         </div>
                         <p class="app-description">
-                            Seu assistente pessoal para manutenção automotiva e controle de combustível, com foco total em privacidade (100% offline).
+                           Gerencie a manutenção e os gastos do seu veículo, mesmo sem internet.
                         </p>
-                        
-                        <ul class="features-list">
-                            <li>Gestão de Manutenção Inteligente</li>
-                            <li>Controle de Combustível e Consumo</li>
-                            <li>Privacidade Total (100% Offline)</li>
-                            <li>Relatórios Detalhados em PDF</li>
-                            <li>Backup local em formato JSON</li>
-                        </ul>
                     </div>
                     <div class="app-card-footer">
-                        <span class="coming-soon-button">Em Breve no Google Play</span>
+                        <a href="carlife-log.html" class="details-button">Saiba Mais</a>
                     </div>
                 </div>
-
-                <!-- Para adicionar um novo app, copie e cole o bloco .app-card acima e altere o conteúdo -->
 
             </div>
         </div>
