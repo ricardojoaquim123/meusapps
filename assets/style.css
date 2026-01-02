@@ -209,18 +209,20 @@ main {
 }
 
 .features-list li {
-    margin-bottom: 12px;
-    display: flex;
-    align-items: flex-start;
-    line-height: 1.5;
+    margin-bottom: 16px;
+    padding-left: 30px;
+    position: relative;
+    line-height: 1.6;
 }
 
 .features-list li::before {
     content: '✔';
     color: var(--primary-color);
-    margin-right: 15px;
-    font-size: 1.4em;
-    line-height: 1.2;
+    font-size: 1.2em;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    top: 5px;
 }
 
 .sidebar .cta-box {
