@@ -194,6 +194,14 @@ main {
     font-size: 2em;
 }
 
+.main-content p {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    text-align: left;
+    word-break: break-word;
+}
+
 .features-list {
     list-style-type: none;
     padding: 0;
