@@ -15,32 +15,113 @@ body {
 }
 
 .container {
-    max-width: 960px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
 }
 
 /* Header da Página Principal */
 header {
-    text-align: center;
-    padding: 80px 20px;
-    background: rgba(16, 18, 22, 0.5);
+    position: relative;
+    overflow: hidden;
+    padding: 32px 0 70px;
+    background: radial-gradient(circle at 20% 20%, rgba(0, 170, 255, 0.15), transparent 35%),
+                radial-gradient(circle at 80% 0%, rgba(0, 170, 255, 0.12), transparent 30%),
+                rgba(16, 18, 22, 0.7);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
 
-header h1 {
-    font-size: 3.5em;
-    margin-bottom: 10px;
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+.brand {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+    font-weight: 500;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.hero-copy h1 {
+    font-size: 3.2em;
+    margin: 0 0 12px 0;
     color: var(--primary-color);
     font-weight: 700;
 }
 
-header p {
+.hero-copy p {
     font-size: 1.2em;
     font-weight: 300;
-    max-width: 600px;
-    margin: 0 auto;
+    margin: 0 0 20px 0;
+    color: var(--text-secondary-color);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.ghost-button {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.ghost-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.hero-card {
+    background: rgba(30, 30, 30, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.hero-card h3 {
+    margin: 0 0 12px 0;
+    color: var(--primary-color);
+}
+
+.hero-card p {
+    margin: 0;
+    color: var(--text-secondary-color);
 }
 
 main {
@@ -116,6 +197,9 @@ main {
     padding: 25px 30px;
     background-color: rgba(0, 0, 0, 0.2);
     text-align: center;
+    display: grid;
+    gap: 12px;
+    justify-items: center;
 }
 
 .details-button {
@@ -183,8 +267,8 @@ main {
 
 .content {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
 }
 
 .main-content h2 {
@@ -198,8 +282,7 @@ main {
     hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
-    text-align: left;
-    word-break: break-word;
+    text-align: justify;
 }
 
 .features-list {
@@ -213,6 +296,8 @@ main {
     padding-left: 30px;
     position: relative;
     line-height: 1.6;
+    display: flex;
+    align-items: baseline;
 }
 
 .features-list li::before {
@@ -223,6 +308,11 @@ main {
     position: absolute;
     left: 0;
     top: 5px;
+}
+
+.feature-title {
+    font-weight: 700;
+    margin-right: 0.5em;
 }
 
 .sidebar .cta-box {
@@ -284,8 +374,47 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.intro-card {
+    background: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+}
+
+.intro-card h2 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 2.2em;
+}
+
+.intro-card p {
+    margin: 0;
+    color: var(--text-secondary-color);
+    font-size: 1.05em;
+}
+
 /* Media Queries para Responsividade */
 @media (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-copy h1 {
+        font-size: 2.4em;
+    }
     .content {
         grid-template-columns: 1fr;
     }
