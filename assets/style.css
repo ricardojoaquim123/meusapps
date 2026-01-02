@@ -209,9 +209,10 @@ main {
 }
 
 .features-list li {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     display: flex;
     align-items: flex-start;
+    line-height: 1.5;
 }
 
 .features-list li::before {
