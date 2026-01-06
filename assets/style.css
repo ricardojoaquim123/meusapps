@@ -194,12 +194,13 @@ main {
 }
 
 .app-card-footer {
-    padding: 25px 30px;
-    background-color: rgba(0, 0, 0, 0.2);
-    text-align: center;
-    display: grid;
+    padding: 18px 20px;
+    background-color: rgba(0, 0, 0, 0.12);
+    display: flex;
     gap: 12px;
-    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .details-button {
@@ -329,13 +330,15 @@ main {
 }
 
 .play-store-button img {
-    height: 60px;
-    transition: transform 0.2s ease;
+    height: 44px;
+    max-height: 56px;
+    width: auto;
+    transition: transform 0.18s ease, filter 0.18s ease;
 }
 
 .play-store-button:hover img {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 10px rgba(0, 170, 255, 0.5));
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 8px rgba(0, 170, 255, 0.45));
 }
 
 .coming-soon-button {
@@ -473,6 +476,14 @@ footer a:hover {
 
 /* small tweak: ensure badge images scale but keep aspect */
 .play-store-button img { max-width: 100%; height: auto; }
+
+@media (min-width: 1100px) {
+    .play-store-button img { height: 56px; }
+}
+
+@media (max-width: 480px) {
+    .play-store-button img { height: 40px; }
+}
 
 /* ensure main content is centered on wide screens */
 .content { margin: 0 auto; padding: 0 10px; }
