@@ -1,0 +1,30 @@
+[
+  {
+    "id": "scanflow",
+    "name": "ScanFlow",
+    "logo": "assets/images/scanflow-logo.png",
+    "description": "Substitua seu scanner de mesa por digitalizações rápidas, filtros inteligentes e exportação profissional.",
+    "features": [
+      "Digitalização em lote com ML Kit",
+      "Exportação em PDF, JPG e PNG",
+      "Filtros otimizados e rotação por página",
+      "Histórico inteligente para reenviar rápido"
+    ],
+    "detailsUrl": "scanflow.html",
+    "storeUrl": "https://play.google.com/store/apps/details?id=com.rjl.scanflow.scanflow"
+  },
+  {
+    "id": "carlife",
+    "name": "CarLife Log",
+    "logo": "assets/images/carlife-log-logo.png",
+    "description": "Assistente offline-first para manutenção automotiva, controle de combustível e histórico de gastos.",
+    "features": [
+      "Cadastro ilimitado de veículos e quilometragem",
+      "Registros de manutenção com comprovantes",
+      "Médias de consumo e gastos com gráficos",
+      "Relatórios PDF para backup ou revenda"
+    ],
+    "detailsUrl": "carlife-log.html",
+    "storeUrl": "https://play.google.com/store/apps/details?id=com.carlife.log"
+  }
+]
