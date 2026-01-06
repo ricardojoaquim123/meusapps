@@ -430,3 +430,49 @@ footer a:hover {
         margin-bottom: 20px;
     }
 }
+
+/* Additional responsiveness for tablets and small phones */
+@media (max-width: 1024px) {
+    .container {
+        padding: 18px;
+    }
+    .hero-copy h1 {
+        font-size: 2.6em;
+    }
+    .app-card .app-logo {
+        width: 52px;
+        height: 52px;
+    }
+    .app-card-content { padding: 22px; }
+    .app-card-footer { padding: 18px; }
+    .intro-card { padding: 22px; }
+}
+
+@media (max-width: 480px) {
+    body { font-size: 15px; }
+    .container { padding: 12px; }
+    .hero-copy h1 { font-size: 1.8em; }
+    .hero-copy p { font-size: 1em; }
+    .hero-actions { flex-direction: column; align-items: stretch; }
+    .details-button, .ghost-button { width: 100%; text-align: center; }
+    .apps-grid { gap: 20px; grid-template-columns: 1fr; }
+    .app-card-content { padding: 16px; }
+    .app-card .app-logo { width: 44px; height: 44px; margin-right: 12px; }
+    .app-card h3 { font-size: 1.25em; }
+    .app-card .app-description { font-size: 0.98em; }
+    .app-card-footer { padding: 14px; }
+    .app-header-detail { padding: 18px; }
+    .app-header-detail .app-logo { width: 64px; height: 64px; margin-bottom: 12px; }
+    .app-title-group h1 { font-size: 1.6em; }
+    .main-content h2 { font-size: 1.4em; margin-top: 28px; }
+    .main-content p { font-size: 0.98em; }
+    .play-store-button img { height: 48px; }
+    .sidebar .cta-box { padding: 18px; margin-top: 24px; }
+    .back-link { margin: 14px 0; }
+}
+
+/* small tweak: ensure badge images scale but keep aspect */
+.play-store-button img { max-width: 100%; height: auto; }
+
+/* ensure main content is centered on wide screens */
+.content { margin: 0 auto; padding: 0 10px; }
